@@ -18,7 +18,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod
                                     tibulum diam suspendisse adipiscing diam quis. Et id volutpat sit odio venenatis a dui.
                                 </p>
-                                <a class="default-button" href="about.html"><span>L
+                                <a class="default-button" href="{{ route('site.about') }}"><span>L
                                         Saber mais<i class="flaticon-right-arrow"></i></span></a>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod
                                     tibulum diam suspendisse adipiscing diam quis. Et id volutpat sit odio venenatis a dui.
                                 </p>
-                                <a class="default-button" href="about.html"><span>L
+                                <a class="default-button" href="{{ route('site.about') }}"><span>L
                                         Saber mais<i class="flaticon-right-arrow"></i></span></a>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod
                                     tibulum diam suspendisse adipiscing diam quis. Et id volutpat sit odio venenatis a dui.
                                 </p>
-                                <a class="default-button" href="about.html"><span>L
+                                <a class="default-button" href="{{ route('site.about') }}"><span>L
                                         Saber mais<i class="flaticon-right-arrow"></i></span></a>
                             </div>
                         </div>
@@ -73,11 +73,11 @@
                         <div class="features-card-header">
                             <span>01</span>
                             <h4>
-                                Serviços Confiáveis</h4>
+                                Visão</h4>
                         </div>
-                        <p>Lorem ipsum dolor sit amet rts consecte ab elit ut elit tell luctus nec ulla mcor Lorem ipsum
-                            dolor sit amet rts.</p>
-                        <a class="read-more-btn" href="about.html">
+                        <p>Tratar de cada detalhe do funcionamento da engenharia por trás de todos os nossos
+                            serviços prestados é o nosso objectivo.</p>
+                        <a class="read-more-btn" href="{{ route('site.about') }}">
                             consulte Mais informação <i class="flaticon-right-arrow"></i></a>
                     </div>
                 </div>
@@ -85,11 +85,11 @@
                     <div class="features-card-2">
                         <div class="features-card-header">
                             <span>02</span>
-                            <h4>Licenciado e certificado</h4>
+                            <h4>Nossa Missão</h4>
                         </div>
-                        <p>Lorem ipsum dolor sit amet rts consecte ab elit ut elit tell luctus nec ulla mcor Lorem ipsum
-                            dolor sit amet rts.</p>
-                        <a class="read-more-btn" href="about.html">
+                        <p>É superar com excelência as necessidades dos clientes, oferecendo um serviço de confiança,
+                            rigor, transparência e precisão de forma rápida e personalizada.</p>
+                        <a class="read-more-btn" href="{{ route('site.about') }}">
                             consulte Mais informação <i class="flaticon-right-arrow"></i></a>
                     </div>
                 </div>
@@ -97,11 +97,11 @@
                     <div class="features-card-2">
                         <div class="features-card-header">
                             <span>03</span>
-                            <h4>Quality Guarantee</h4>
+                            <h4>Objectivos</h4>
                         </div>
-                        <p>Lorem ipsum dolor sit amet rts consecte ab elit ut elit tell luctus nec ulla mcor Lorem ipsum
-                            dolor sit amet rts.</p>
-                        <a class="read-more-btn" href="about.html">
+                        <p>Busca ser referência em tecnologia e automação, com excelência no serviço, foco na
+                            satisfação do cliente e expansão no mercado online. </p>
+                        <a class="read-more-btn" href="{{ route('site.about') }}">
                             consulte Mais informação <i class="flaticon-right-arrow"></i></a>
                     </div>
                 </div>
@@ -123,16 +123,21 @@
                         <div class="default-section-title">
                             <span>Qualidade garantida</span>
                             <h3>Consertamos todos os tipos de computadores e Impressoras</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod.
-                                Vestibulum, diam suspendisse adipiscing diam quis. Et id volutpat sit odio venenatis a dui.
-                                Pharetra, quam non, amet pretium tincidunt sem tincidunt fringilla. Convallis ac viverra
-                                egestas in.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod.
-                                Vestibulum, diam suspendisse adipiscing diam quis. Et id volutpat sit odio venenatis a dui
-                                Pharetra.</p>
+                            <p>Somos a Workaholic SA, especialistas em tecnologia, telecomunicações e automação. Cuide da
+                                produtividade do seu negócio com segurança e eficiência.
+                            <ol>
+                                <li>Consertamos computadores e impressoras de todos os tipos.</li>
+                                <li>Equipe altamente qualificada e experiente.</li>
+                                <li>Soluções personalizadas para suas necessidades.</li>
+                                <li>Agilidade e compromisso com a excelência.</li>
+                                <li>Expansão contínua para melhor atendê-lo.</li>
+                            </ol><br>Escolha a Workaholic SA e experimente a mais alta qualidade em serviços. Entre em
+                            contato agora e eleve sua produtividade para um novo nível!
+                            </p>
+
                         </div>
-                        <a class="default-button default-button-2 mt-30" href="about.html"><span>Sobre a nossa empresa <i
-                                    class="flaticon-right-arrow"></i></span></a>
+                        <a class="default-button default-button-2 mt-30" href="{{ route('site.about') }}"><span>Sobre a
+                                nossa empresa <i class="flaticon-right-arrow"></i></span></a>
                     </div>
                 </div>
             </div>
@@ -184,35 +189,35 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-6 col-sm-8 col-12">
                         <div class="working-process-card-2">
-                            <span>01</span>
+                            <span>1 </span>
                             <div class="working-process-title-2">
                                 <img src="/site/images/icons/setting.png" alt="image">
-                                <h4>
-                                    Caminhe, entrego e pego</h4>
+
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur ad ipis cing elit . Nec ut viverra eros euis </p>
+                            <p>Realizar uma avaliação completa do equipamento ou sistema para identificar o problema
+                                específico e suas causas. </p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-8 col-12">
                         <div class="working-process-card-2">
-                            <span>02</span>
+                            <span>2 </span>
                             <div class="working-process-title-2">
                                 <img src="/site/images/icons/web-maintenance.png" alt="image">
-                                <h4>
-                                    Mail In Envie seus gadgets</h4>
+
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur ad ipis cing elit . Nec ut viverra eros euis </p>
+                            <p>Realizar as devidas correções, trocas de peças defeituosas, configurações ou ajustes
+                                necessários para restaurar o funcionamento adequado. </p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-8 col-12">
                         <div class="working-process-card-2">
-                            <span>03</span>
+                            <span>3 </span>
                             <div class="working-process-title-2">
                                 <img src="/site/images/icons/certificate.png" alt="image">
-                                <h4>
-                                    Peguei e Coletei</h4>
+
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur ad ipis cing elit . Nec ut viverra eros euis </p>
+                            <p>Após o reparo, realizar testes para verificar o funcionamento adequado e configurar o
+                                equipamento ou sistema para garantir seu desempenho otimizado..</p>
                         </div>
                     </div>
                 </div>
@@ -231,8 +236,8 @@
                                 <h3>
                                     Cuidado rápido e excelente para seus computadores</h3>
                             </div>
-                            <a class="default-button mt-30" href="contact.html"><span>Browse Services <i
-                                        class="flaticon-right-arrow"></i></span></a>
+                            <a class="default-button mt-30" href="{{ route('site.contact') }}"><span>
+                                    Contate-nos <i class="flaticon-right-arrow"></i></span></a>
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-6 col-sm-12 col-12">
@@ -250,28 +255,25 @@
                         <div class="fun-fact-card">
                             <i class="flaticon-success"></i>
                             <h2><span class="odometer" data-count="125">00</span>+</h2>
-                            <p>Projects Done</p>
+                            <p>
+                                Equipamentos Reparados</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                         <div class="fun-fact-card">
                             <i class="flaticon-experience"></i>
                             <h2><span class="odometer" data-count="200">00</span>+</h2>
-                            <p>Happy Customer</p>
+                            <p>
+Cliente Feliz</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                        <div class="fun-fact-card">
-                            <i class="flaticon-guarantee-certificate"></i>
-                            <h2><span class="odometer" data-count="10">00</span>+</h2>
-                            <p>Award Winnings</p>
-                        </div>
-                    </div>
+
                     <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                         <div class="fun-fact-card">
                             <i class="flaticon-expert"></i>
-                            <h2><span class="odometer" data-count="70">00</span>+</h2>
-                            <p>Team Experts</p>
+                            <h2><span class="odometer" data-count="{{ count($agentes) }}">00</span>+</h2>
+                            <p>
+                                Equipe Especialistas</p>
                         </div>
                     </div>
                 </div>
@@ -311,46 +313,7 @@
     </div>
 
 
-    <div class="sign-up ptb-100">
-        <div class="container">
-            <div class="row justify-content-end">
-                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                    <div class="sign-up-form-area">
-                        <div class="default-section-title color-title">
-                            <h3>
-                                Inscreva-se para reparo</h3>
-                            <p>Insira seus detalhes de contato para agendar um reparo.</p>
-                        </div>
-                        <form>   <label for="" class="text-white">Nome</label>
-                            <input type="text" class="form-control" placeholder="Nome" required>
-                            <label for="" class="text-white">Email</label>
-                            <input type="email" class="form-control" placeholder="E-mail" required>
-                            <label for="" class="text-white">Telefone</label>
-                            <input type="email" class="form-control" placeholder="Telefone" required>
-                            <label for="" class="text-white">Data Prevista</label>
-                            <input type="date" class="form-control" placeholder="Telefone" required>
-                            <label for="" class="text-white">Escolha o Serviço</label>
-                            <select  name="level" id="level" class="form-control  text-black" required multiple data-live-search="true">
 
-                              @foreach ($services as $item )
-
-
-                                    <option value="Analista">{{ $item->name }}</option>
-                                    @endforeach
-
-                            </select>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="ship-different-address" required />
-                                <label class="form-check-label" for="ship-different-address">Eu concordo com a Política de
-                                    Privacidade e os Termos de Serviço.</label>
-                            </div>
-                            <button class="default-button"><span>Enviar pedido</span></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -358,7 +321,7 @@
         <div class="container">
             <div class="default-section-title default-section-title-middle">
                 <span>
-                    Notícias recentes</span>
+                    Notícias Recentes</span>
                 <h3>
                     Deve ler a postagem do blog</h3>
             </div>

@@ -13,6 +13,8 @@ Route::get('/servicos', ['as' => 'site.services', 'uses' => 'Site\ServiceControl
 Route::get('/servicos/{title}', ['as' => 'site.services.show', 'uses' => 'Site\ServiceController@show']);
 
 
+/** about */
+Route::get('/sobre', ['as' => 'site.about', 'uses' => 'Site\AboutController@index']);
 /* Product */
 Route::get('/produtos', ['as' => 'site.produt', 'uses' => 'Site\ProductController@index']);
 Route::get('/produtos/{title}', ['as' => 'site.produt.show', 'uses' => 'Site\ProductController@show']);

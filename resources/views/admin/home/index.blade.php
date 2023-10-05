@@ -1,5 +1,5 @@
 @extends('layouts.merge.dashboard')
-@section('titulo', 'Portal Oficial da ReMA')
+@section('titulo', 'Portal Oficial do Workaholic SA')
 @section('content')
 
 <div class="containe">

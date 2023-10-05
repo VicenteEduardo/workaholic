@@ -23,23 +23,27 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item ">
-                            <a href="#" class="nav-link dropdown-toggle active">Home</a>
+                            <a href="#" class="nav-link  active">Home</a>
 
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('site.services') }}" class="nav-link dropdown-toggle">Serviços</a>
+                            <a href="{{ route('site.services') }}" class="nav-link ">Serviços</a>
 
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('site.produt') }}" class="nav-link dropdown-toggle">Produtos </a>
+                            <a href="{{ route('site.produt') }}" class="nav-link ">Produtos </a>
 
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('site.agentes') }}" class="nav-link dropdown-toggle">Agentes </a>
+                            <a href="{{ route('site.agentes') }}" class="nav-link ">Agentes </a>
 
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('site.news') }}" class="nav-link dropdown-toggle">Notícias </a>
+                            <a href="{{ route('site.news') }}" class="nav-link ">Notícias </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('site.about') }}" class="nav-link ">Sobre Nós </a>
 
                         </li>
                         <li class="nav-item"><a href="{{ route('site.contact') }}" class="nav-link">Contactos</a></li>

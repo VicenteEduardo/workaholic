@@ -31,8 +31,8 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="footer-logo-area">
                     <a href="index.html"><img src="/site/images/logo2.png" alt="logo" width="100"></a>
-                    <p>Lorem ipsum dolor sit amet, conse ctetur adip iscing elit. Nt viverra eros euis mod Vestibu diam
-                        suspendisse adi pisc diam quis. Et id volutpat sit odio.</p>
+                    <p>Workaholic SA é nome comercial da empresa W. Suntec – Sistemas Automáticos uma
+                        empresa voltada ao ramo da tecnologia na área de telecomunicações e automação.</p>
                     <div class="footer-social-area">
                         <ul>
                             <li><a href="https://www.facebook.com/" target="_blank"><i
@@ -51,10 +51,8 @@
                     <h3>
                         Serviços</h3>
                     <ul>
-                        @foreach ($services as $item )
-
-
-                        <li><a href="services.html">PC Repair</a></li>
+                        @foreach ($services as $item)
+                            <li><a href="{!! url('/servicos/' . urlencode($item->name)) !!}">{!! mb_substr($item->name, 0, 25, 'UTF-8') !!}...</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -64,11 +62,11 @@
                     <h3>
                         Links Úteis</h3>
                     <ul>
-                        <li><a href="terms.html">Conditions</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="blog.html">Latest Blogs</a></li>
-                        <li><a href="testimonial.html">Testimonials</a></li>
-                        <li><a href="mechanics.html">Our Mechanics</a></li>
+                        <li><a href="{{ route('site.home') }}">Home</a></li>
+                        <li><a href="{{ route('site.services') }}l">Serviços</a></li>
+                        <li><a href="{{ route('site.produt') }}">Produtos</a></li>
+                        <li><a href="{{ route('site.news') }}">Notícias</a></li>
+                        <li><a href="{{ route('site.contact') }}">Contactos</a></li>
                     </ul>
                 </div>
             </div>
@@ -78,21 +76,18 @@
                         Entrar em contato</h3>
                     <div class="footer-contact-card">
                         <i class="flaticon-phone-call"></i>
-                        <h6>Phone</h6>
-                        <p><a href="tel:123456778">+123 456 778</a></p>
+                        <h6>Telefone</h6>
+                        <p><a href="tel:123456778">{{ $configuration->telefone }}</a></p>
                     </div>
                     <div class="footer-contact-card">
                         <i class="flaticon-email"></i>
                         <h6>Email</h6>
-                        <p><a
-                                href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#076e69616847756277662964686a"><span
-                                    class="__cf_email__"
-                                    data-cfemail="fd94939b92bd8f988d9cd39e9290">[email&#160;protected]</span></a></p>
+                        <p>{{ $configuration->email }}</p>
                     </div>
                     <div class="footer-contact-card">
                         <i class="flaticon-location"></i>
-                        <h6>Loaction</h6>
-                        <p><a href="https://goo.gl/maps/D8eSMhkTP4a7n1Pd8" target="_blank">Luanda Angola</a></p>
+                        <h6>Localização</h6>
+                        <p>{{ $configuration->adress }}</p>
                     </div>
                 </div>
             </div>

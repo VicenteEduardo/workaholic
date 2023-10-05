@@ -51,7 +51,7 @@ class ProductController extends Controller
             'name' => 'required|min:5|max:255',
             'description' => 'required|min:5',
             'price' => 'required|numeric',
-            'photo' => 'required|mimes:jpg,png,jpeg',
+            'photo' => 'required|mimes:jpg,png,jpeg,webp',
         ]);
 
         $file = $request->file('photo')->store('produtos');
@@ -113,7 +113,7 @@ class ProductController extends Controller
             'name' => 'required|min:5|max:255',
             'description' => 'required|min:5',
             'price' => 'required|numeric',
-            'photo' => 'mimes:jpg,png,jpeg',
+            'photo' => 'mimes:jpg,png,jpeg,webp',
         ]);
 
         if ($file = $request->file('foto')) {

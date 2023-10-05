@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrap();
 
         $response['configuration'] = Configuration::first();
-        $response['services'] = Service::get();
+        $response['services'] = Service::paginate(4);
         view()->share($response);
 
 

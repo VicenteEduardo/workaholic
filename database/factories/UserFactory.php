@@ -24,15 +24,15 @@ class UserFactory extends Factory
     {
         return [
             'name' => "admin", //$this->faker->name(),
-            'email' => "infosigov@admin.com", //$this->faker->unique()->safeEmail(),
+            'email' => "geral@workaholic.ao", //$this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
             'level' => 'Administrador',
-            'password' => bcrypt("t;jfN=2z7DIh"), //'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => bcrypt("12345678"), //'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
         ];
     }
 
-    
+
 
     /**
      * Indicate that the model's email address should be unverified.

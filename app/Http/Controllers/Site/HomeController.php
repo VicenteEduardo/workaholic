@@ -29,6 +29,8 @@ class HomeController extends Controller
         $response['services'] = Service::get();
 
         $response['agentes'] = Agente::get();
+
+
         $response['services'] = Service::get();
         return view('site.home.index', $response);
     }
