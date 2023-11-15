@@ -39,11 +39,16 @@
                             </ul>
                         </div>
                         <div class="sidebar-card sidebar-download mt-30">
-                            <h3>Nosso Folheto</h3>
-                            <p>Alienum phaedrum torquatos nec eu vis de peri culis ex nihil is in mei. Mei an pericula
-                                hincar tem ei est.</p>
-                            <a class="default-button" href="assets/hello.doc"> <span><i class="flaticon-pdf"></i>
-                                    Download PDF Now!</span> </a>
+                            <h3>Solicitar Produto</h3>
+                            <p>Na Workaholic SA, nossa paixão é impulsionar o sucesso do seu negócio por meio de soluções
+                                tecnológicas de ponta. Simplificamos sua jornada para o topo, oferecendo qualidade e
+                                eficiência incomparáveis.
+
+                                Não perca mais tempo. Converse conosco agora para transformar sua empresa e alcançar o
+                                sucesso que você merece. Sua trajetória rumo ao êxito começa aqui! .</p>
+                                <a class="default-button whatsapp-button" href="https://api.whatsapp.com/send?phone=+244946359245">
+                                    <span><i class="fab fa-whatsapp"></i> Entre em contato pelo WhatsApp</span>
+                                  </a>
                         </div>
 
                     </div>

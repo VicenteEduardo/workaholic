@@ -62,14 +62,7 @@
 
                             </ul>
                         </div>
-                        <div class="sidebar-card sidebar-download mt-30">
-                            <h3>Nosso Folheto</h3>
-                            <p>Alienum phaedrum torquatos nec eu vis de peri culis ex nihil is in mei. Mei an pericula
-                                hincar tem ei est.</p>
-                            <a class="default-button" href="/site/hello.doc"> <span><i class="flaticon-pdf"></i>
-                                    Download PDF Now!</span> </a>
-                        </div>
-
+                       
                     </div>
                 </div>
             </div>

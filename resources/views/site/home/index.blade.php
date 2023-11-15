@@ -243,7 +243,7 @@
                     <div class="col-lg-7 col-md-6 col-sm-12 col-12">
                         <div class="intro-video-play-area pt-30">
                             <a class="video-popup"
-                                href="https://www.youtube.com/watch?v=uS8nqhqhL8g&amp;ab_channel=Envato"> <i
+                                href="{{ $configuration->youtube }}"> <i
                                     class="fas fa-play"></i></a>
                         </div>
                     </div>

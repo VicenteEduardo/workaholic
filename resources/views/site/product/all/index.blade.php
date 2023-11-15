@@ -29,9 +29,9 @@
                                     </div>
                                     <div class="blog-card-text">
                                         <span class="blog-date"><i class="flaticon-deadline"></i>
-                                          Preço:{!! number_format($item->price, 2, ',', '.') . ' ' . 'KZ' !!}</span>
+                                            Preço:{!! number_format($item->price, 2, ',', '.') . ' ' . 'KZ' !!}</span>
                                         <h4><a href="{!! url('/produtos/' . urlencode($item->name)) !!}">{!! mb_substr($item->name, 0, 48, 'UTF-8') !!}</a></h4>
-
+                                        <p class="btn-holder"><a href="{{ route('add.to.cart', $item->id) }}" class="btn btn-warning btn-block text-center" role="button">Adcionar ao Carrinho</a> </p>
                                         <a class="read-more-btn" href="{!! url('/produtos/' . urlencode($item->name)) !!}">consulte Mais informação <i
                                                 class="flaticon-right-arrow"></i></a>
                                     </div>
@@ -57,17 +57,25 @@
                             <h3>Outros Produtos</h3>
                             <ul>
                                 @foreach ($lasted as $item)
-                                    <li><a href="{!! url('/produtos/' . urlencode($item->name)) !!}"><span><i class="flaticon-double-chevron"></i>{!! mb_substr($item->name, 0, 48, 'UTF-8') !!}</span> </a></li>
+                                    <li><a href="{!! url('/produtos/' . urlencode($item->name)) !!}"><span><i
+                                                    class="flaticon-double-chevron"></i>{!! mb_substr($item->name, 0, 48, 'UTF-8') !!}</span> </a>
+                                    </li>
                                 @endforeach
 
                             </ul>
                         </div>
                         <div class="sidebar-card sidebar-download mt-30">
-                            <h3>Nosso Folheto</h3>
-                            <p>Alienum phaedrum torquatos nec eu vis de peri culis ex nihil is in mei. Mei an pericula
-                                hincar tem ei est.</p>
-                            <a class="default-button" href="/site/hello.doc"> <span><i class="flaticon-pdf"></i>
-                                    Download PDF Now!</span> </a>
+                            <h3>Solicitar Produto</h3>
+                            <p>Na Workaholic SA, nossa paixão é impulsionar o sucesso do seu negócio por meio de soluções
+                                tecnológicas de ponta. Simplificamos sua jornada para o topo, oferecendo qualidade e
+                                eficiência incomparáveis. Não perca mais tempo. Converse conosco agora para transformar sua
+                                empresa e alcançar o sucesso que você merece. Sua trajetória rumo ao êxito começa aqui! .
+                            </p>
+
+
+                            <a class="default-button" href="{{ $configuration->telefone }}"> <span><i
+                                        class="fas fa-phone"></i>
+                                    Ligue para nós:{{ $configuration->telefone }}</span> </a>
                         </div>
 
                     </div>

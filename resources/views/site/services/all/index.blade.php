@@ -40,7 +40,10 @@
                         @endforeach
 
                     </div>
+
                     <div class="paginations mt-30">
+
+
                         <div class="col-12">
                             <div class="row justify-content-center">
                                 <div class="col-lg-4 py-5">
@@ -53,21 +56,35 @@
                 <div class="col-lg-4">
                     <div class="sidebar-area mt-30 pl-20">
 
+
+
                         <div class="sidebar-card sidebar-categories mt-30">
                             <h3>Outros Serviços</h3>
-                            <ul>
-                                @foreach ($lasted as $item)
+                            <div class="sidebar-services">
+                                <ul>
+
+
+                                    @foreach ($lasted as $item)
                                     <li><a href="{!! url('/servicos/' . urlencode($item->name)) !!}"><span><i class="flaticon-double-chevron"></i>{!! mb_substr($item->name, 0, 48, 'UTF-8') !!}</span> </a></li>
                                 @endforeach
+                                </ul>
+                                </div>
 
-                            </ul>
+
+
                         </div>
                         <div class="sidebar-card sidebar-download mt-30">
-                            <h3>Nosso Folheto</h3>
-                            <p>Alienum phaedrum torquatos nec eu vis de peri culis ex nihil is in mei. Mei an pericula
-                                hincar tem ei est.</p>
-                            <a class="default-button" href="/site/hello.doc"> <span><i class="flaticon-pdf"></i>
-                                    Download PDF Now!</span> </a>
+                            <h4> <b>Solicitar  Assistência Técnica </b></h4>
+                            <p>Na Workaholic SA, nossa paixão é impulsionar o sucesso do seu negócio por meio de soluções
+                                tecnológicas de ponta. Simplificamos sua jornada para o topo, oferecendo qualidade e
+                                eficiência incomparáveis. Não perca mais tempo. Converse conosco agora para transformar sua
+                                empresa e alcançar o sucesso que você merece. Sua trajetória rumo ao êxito começa aqui! .
+                            </p>
+
+
+                            <a class="default-button" href="{{ $configuration->telefone }}"> <span><i
+                                        class="fas fa-phone"></i>
+                                    Ligue para nós:{{ $configuration->telefone }}</span> </a>
                         </div>
 
                     </div>

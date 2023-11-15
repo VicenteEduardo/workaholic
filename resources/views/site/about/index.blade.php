@@ -157,7 +157,7 @@
                     </div>
                     <div class="col-lg-7 col-md-6 col-sm-12 col-12">
                         <div class="intro-video-play-area pt-30">
-                            <a class="video-popup" href="https://www.youtube.com/watch?v=uS8nqhqhL8g&amp;ab_channel=Envato">
+                            <a class="video-popup" href="{{ $configuration->youtube }}">
                                 <i class="fas fa-play"></i></a>
                         </div>
                     </div>
@@ -184,7 +184,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                         <div class="fun-fact-card">
                             <i class="flaticon-expert"></i>
-                            <h2><span class="odometer" data-count="70">00</span>+</h2>
+                            <h2><span class="odometer" data-count="{{ $agentesCount }}">00</span>+</h2>
                             <p>
                                 Equipe Especialistas</p>
                         </div>

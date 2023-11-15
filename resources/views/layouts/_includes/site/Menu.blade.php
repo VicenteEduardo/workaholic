@@ -1,9 +1,9 @@
 <div class="navbar-area">
-
     <div class="main-responsive-nav">
         <div class="container-fluid container-large">
             <div class="mobile-nav">
-                <a href="{{ route('site.home') }}" class="logo"><img src="/site/images/logo2.png" alt="logo" /></a>
+                <a href="{{ route('site.home') }}" class="logo"><img width="68" height="30"
+                        src="/site/images/logo2.png" alt="logo" /></a>
                 <ul class="menu-sidebar menu-small-device">
                     <li><a class="cart-icon" href="cart.html"><i class="flaticon-cart"></i><span>03</span></a></li>
                     <li><button class="popup-button"><i class="flaticon-loupe"></i></button></li>
@@ -50,14 +50,19 @@
                     </ul>
                     <div class="menu-sidebar">
                         <ul>
-                            <li><a class="cart-icon" href="cart.html"><i class="flaticon-cart"></i><span>03</span></a>
+                            <li><a class="cart-icon" href="{{ route('cart') }}"><i class="flaticon-cart"></i><span>
+                                        @if (session('cart'))
+                                        {{ count(session('cart')) }}
+                                        @else
+                                        @endif
+                                    </span></a>
                             </li>
 
                             <li>
-                                <button type="button" class="default-button" data-toggle="modal" data-target="#exampleModal">
-                                    <span>Solicitar Técnico <i
-                                        class="flaticon-right-arrow"></i></span>
-                                  </button>
+                                <button type="button" class="default-button" data-toggle="modal"
+                                    data-target="#exampleModal">
+                                    <span>Solicitar Técnico <i class="flaticon-right-arrow"></i></span>
+                                </button>
 
                         </ul>
                     </div>
@@ -69,22 +74,23 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
