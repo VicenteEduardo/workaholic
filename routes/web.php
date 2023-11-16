@@ -23,6 +23,7 @@ Route::get('/add-to-cart/{id}', ['as' => 'add.to.cart', 'uses' => 'Site\ProductC
 Route::patch('/update-cart', ['as' => 'update.cart', 'uses' => 'Site\ProductController@update']);
 Route::get('/remove-from-cart/{id}', ['as' => 'remove.from.cart', 'uses' => 'Site\ProductController@remove']);
 
+Route::post('/finalizar', ['as' => 'finish', 'uses' => 'Site\ProductController@finish']);
 
 
 Route::get('/Termos-de-Uso', ['as' => 'site.termsOfUse', 'uses' => 'Site\TermsOfUseController@index']);

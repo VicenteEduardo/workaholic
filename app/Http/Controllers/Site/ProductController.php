@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Venda;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -104,6 +105,21 @@ class ProductController extends Controller
                 session()->put('cart', $cart);
             }
             return  redirect()->route('cart')->with('delete', '1');
+        }
+    }
+
+    public function finish(Request $request)
+    {
+        $cart = session()->get('cart');
+        foreach ($cart as $item) {
+
+            Venda::create([
+
+                "name" => $item['name'],
+                "quantity" => $item['quantity'],
+                "price" => $item['price'],
+                "image" => "storage/" . $item['image']
+            ]);
         }
     }
 }
