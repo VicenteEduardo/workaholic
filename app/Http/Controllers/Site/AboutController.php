@@ -18,6 +18,7 @@ class AboutController extends Controller
     {
         $response['services'] = Service::orderBy('id', 'desc')->paginate(3);
         $response['agentes'] = Agente::get();
+        $response['agentesCount'] = Agente::count();
         return view('site.about.index',$response);
     }
 }

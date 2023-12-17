@@ -18,6 +18,12 @@ Route::get('/sobre', ['as' => 'site.about', 'uses' => 'Site\AboutController@inde
 /* Product */
 Route::get('/produtos', ['as' => 'site.produt', 'uses' => 'Site\ProductController@index']);
 Route::get('/produtos/{title}', ['as' => 'site.produt.show', 'uses' => 'Site\ProductController@show']);
+Route::get('/cart', ['as' => 'cart', 'uses' => 'Site\ProductController@cart']);
+Route::get('/add-to-cart/{id}', ['as' => 'add.to.cart', 'uses' => 'Site\ProductController@addToCart']);
+Route::get('/update-cart', ['as' => 'update.cart', 'uses' => 'Site\ProductController@update']);
+Route::get('/remove-from-cart', ['as' => 'remove.from.cart', 'uses' => 'Site\ProductController@remove']);
+
+
 
 Route::get('/Termos-de-Uso', ['as' => 'site.termsOfUse', 'uses' => 'Site\TermsOfUseController@index']);
 

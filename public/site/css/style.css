@@ -5,8 +5,8 @@
 :root {
     --fontFamily: 'Saira Condensed', sans-serif;
     --fontFamily2: 'Poppins', sans-serif;
-    --mainColor: #FC5404;
-    --mainColorShadow: #FC540440;
+    --mainColor: #6BC9D2;
+    --mainColorShadow: #6BC9D240;
     --whiteColor: #ffffff;
     --blackColor: #111111;
     --paragraphColor: #666666;
@@ -1446,7 +1446,7 @@ a.meanmenu-reveal {
     color: var(--whiteColor);
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    border: 1px solid #fc540450;
+    border: 1px solid #6BC9D250;
     background-color: var(--mainColor);
     font-size: 15px;
     font-weight: 400;
@@ -3743,8 +3743,8 @@ a.meanmenu-reveal {
 }
 
 .sidebar-services ul li a:hover {
-    background-color: var(--mainColor);
-    color: var(--whiteColor)
+    background-color:#055b63;
+    color: black;
 }
 
 .sidebar-services ul li .active {

@@ -1,3 +1,28 @@
+<div class="testimonials ptb-100">
+    <div class="container">
+        <div class="default-section-title default-section-title-middle">
+            <span>Parceiros</span>
+            <h3>Parceiros</h3>
+
+        </div>
+        <div class="section-content">
+            <div class="testimonial-slider-area owl-carousel">
+
+                @foreach ($copartners as $item)
+
+                <div class="testimonial-card" style='background-image:url("/storage/{{ $item->photo }}");background-position:center;background-size:cover;height:200px;'>
+                    <p></p>
+                    <div class="testimonial-intro-area"   >
+
+                    </div>
+                </div>
+                @endforeach
+
+
+            </div>
+        </div>
+    </div>
+</div>
 <div class="newsletter ptb-100" style="background-color:#6bc9d2;">
     <div class="container">
         <div class="row align-items-center">
@@ -35,13 +60,13 @@
                         empresa voltada ao ramo da tecnologia na área de telecomunicações e automação.</p>
                     <div class="footer-social-area">
                         <ul>
-                            <li><a href="https://www.facebook.com/" target="_blank"><i
+                            <li><a href="{{ $configuration->facebook }}" target="_blank"><i
                                         class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="https://www.instagram.com/" target="_blank"><i
+                            <li><a href="{{ $configuration->twitter }}" target="_blank"><i
+                                        class="fab fa-twitter"></i></a></li>
+                            <li><a href="{{ $configuration->instagram }}" target="_blank"><i
                                         class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://www.pinterest.com/" target="_blank"><i
-                                        class="fab fa-pinterest-p"></i></a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -103,7 +128,7 @@
             <script>
                 document.write(new Date().getFullYear())
             </script>. <strong></strong> Todos os direitos reservados por <a target="_blank"
-                href="#!">VRLIDENTIDADE</a>
+                href="https://vrlidentidade.ao/">VRLIDENTIDADE</a>
         </p>
     </div>
 </div>
@@ -130,8 +155,6 @@
         </form>
     </div>
 </div>
-
-
 <script src="/site/js/jquery.min.js"></script>
 <script src="/site/js/jquery-ui.min.js"></script>
 <script src="/site/js/bootstrap.bundle.min.js"></script>
@@ -149,8 +172,18 @@
 <script src="/site/js/tilt.js"></script>
 <script src="/site/js/odometer.min.js"></script>
 <script src="/site/js/custom.js"></script>
-</body>
 
-<!-- Mirrored from templates.hibootstrap.com/repa/default/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Jun 2023 13:14:41 GMT -->
+@yield('scripts')
+
+<script>
+    $('#myModal').on('shown.bs.modal', function() {
+        $('#myInput').trigger('focus')
+    })
+    $('#myModal').on('shown.bs.modal', function() {
+        $('#myInput').trigger('focus')
+    })
+    $('#myModal').modal(options)
+</script>
+</body>
 
 </html>

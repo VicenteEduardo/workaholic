@@ -48,9 +48,6 @@ Route::middleware(['auth'])->group(function () {
     Route::middleware(['Editor'])->group(function () {
 
 
-
-
-
         /* Perguntas Frequentes */
         Route::get('admin/perguntas-Frequentes/index', ['as' => 'admin.commonQuestions.index', 'uses' => 'Admin\CommonQuestionsController@index']);
         Route::get('admin/perguntas-Frequentes/show/{id}', ['as' => 'admin.commonQuestions.show', 'uses' => 'Admin\CommonQuestionsController@show']);
@@ -95,15 +92,15 @@ Route::middleware(['auth'])->group(function () {
         /* end servicos */
 
 
-  /* servicos */
-  Route::get('admin/produtos/index', ['as' => 'admin.product.index', 'uses' => 'Admin\ProductController@index']);
-  Route::get('admin/produtos/show/{id}', ['as' => 'admin.product.show', 'uses' => 'Admin\ProductController@show']);
-  Route::get('admin/produtos/create', ['as' => 'admin.product.create', 'uses' => 'Admin\ProductController@create']);
-  Route::post('admin/produtos/store', ['as' => 'admin.product.store', 'uses' => 'Admin\ProductController@store']);
-  Route::get('admin/produtos/edit/{id}', ['as' => 'admin.product.edit', 'uses' => 'Admin\ProductController@edit']);
-  Route::put('admin/produtos/update/{id}', ['as' => 'admin.product.update', 'uses' => 'Admin\ProductController@update']);
-  Route::get('admin/produtos/delete/{id}', ['as' => 'admin.product.delete', 'uses' => 'Admin\ProductController@destroy']);
-  /* end servicos */
+        /* servicos */
+        Route::get('admin/produtos/index', ['as' => 'admin.product.index', 'uses' => 'Admin\ProductController@index']);
+        Route::get('admin/produtos/show/{id}', ['as' => 'admin.product.show', 'uses' => 'Admin\ProductController@show']);
+        Route::get('admin/produtos/create', ['as' => 'admin.product.create', 'uses' => 'Admin\ProductController@create']);
+        Route::post('admin/produtos/store', ['as' => 'admin.product.store', 'uses' => 'Admin\ProductController@store']);
+        Route::get('admin/produtos/edit/{id}', ['as' => 'admin.product.edit', 'uses' => 'Admin\ProductController@edit']);
+        Route::put('admin/produtos/update/{id}', ['as' => 'admin.product.update', 'uses' => 'Admin\ProductController@update']);
+        Route::get('admin/produtos/delete/{id}', ['as' => 'admin.product.delete', 'uses' => 'Admin\ProductController@destroy']);
+        /* end servicos */
 
 
         /* gallery */
@@ -132,6 +129,17 @@ Route::middleware(['auth'])->group(function () {
         Route::put('admin/news/update/{id}', ['as' => 'admin.news.update', 'uses' => 'Admin\NewsController@update']);
         Route::get('admin/news/delete/{id}', ['as' => 'admin.news.delete', 'uses' => 'Admin\NewsController@destroy'])->withoutMiddleware(['EditorAnalist'])->middleware(['Editor']);
         /* end news */
+
+
+            /* news */
+            Route::get('admin/parceiros/index', ['as' => 'admin.copartner.index', 'uses' => 'Admin\CopartnerController@list']);
+            Route::get('admin/parceiros/show/{id}', ['as' => 'admin.copartner.show', 'uses' => 'Admin\CopartnerController@show']);
+            Route::get('admin/parceiros/create', ['as' => 'admin.copartner.create', 'uses' => 'Admin\CopartnerController@create']);
+            Route::post('admin/parceiros/store', ['as' => 'admin.copartner.store', 'uses' => 'Admin\CopartnerController@store']);
+            Route::get('admin/parceiros/edit/{id}', ['as' => 'admin.copartner.edit', 'uses' => 'Admin\CopartnerController@edit']);
+            Route::put('admin/parceiros/update/{id}', ['as' => 'admin.copartner.update', 'uses' => 'Admin\CopartnerController@update']);
+            Route::get('admin/parceiros/delete/{id}', ['as' => 'admin.copartner.delete', 'uses' => 'Admin\CopartnerController@destroy'])->withoutMiddleware(['EditorAnalist'])->middleware(['Editor']);
+            /* end news */
 
         /* Events */
         Route::get('admin/event/index', ['as' => 'admin.event.index', 'uses' => 'Admin\EventController@list']);

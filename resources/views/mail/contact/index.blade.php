@@ -137,7 +137,6 @@
             }
 
         }
-
     </style>
 
 
@@ -193,8 +192,8 @@
                                                                         align="center">
 
                                                                         <img align="center" border="0"
-                                                                            src="https://mediatecas.gov.ao/site/img/logo/rema.png"
-                                                                            alt="Image" title="Image" 
+                                                                            src="https://workaholic.ao/site/images/logo2.png"
+                                                                            alt="Image" title="Image"
                                                                             width="240" />
 
                                                                     </td>
@@ -289,7 +288,8 @@
                                                                 style="color: #47484b; line-height: 140%; text-align: center; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 140%;">
                                                                     <strong><span
-                                                                            style="font-size: 30px; line-height: 42px;">Mensagem do Utente do Portal</span></strong>
+                                                                            style="font-size: 30px; line-height: 42px;">Mensagem
+                                                                            do Utente do Portal</span></strong>
                                                                 </p>
                                                             </div>
 

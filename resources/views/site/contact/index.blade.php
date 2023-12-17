@@ -49,7 +49,7 @@
                                 <div class="col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <input type="text" name="phone_number" class="form-control"
-                                            placeholder="Phone Number" id="phone_number" required
+                                            placeholder="Telefone" id="phone_number" required
                                             data-error="Please enter your phone number">
                                         <div class="help-block with-errors"></div>
                                     </div>
@@ -68,6 +68,17 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
+                                <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                                    <div class="col-md-12">
+                                        {!! RecaptchaV3::field('register') !!}
+                                        @if ($errors->has('g-recaptcha-response'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+
                                 <div class="col-md-12 col-sm-12 col-12">
                                     <button class="default-button" type="submit"><span>Enviar mensagem</span></button>
                                     <div id="msgSubmit" class="h6 text-center hidden"></div>
@@ -83,7 +94,7 @@
                             Suporte ao cliente</h4>
                         <p>Precisa de alguma ajuda? Entre em contato conosco.</p>
                         <ul class="contact-list">
-                            <li><i class="flaticon-phone-call"></i><a href="tel:+123456778"> {{ $configuration->telefone }}</a></li>
+                            <li><i class="flaticon-phone-call"></i><a href="#"> {{ $configuration->telefone }}</a></li>
                             <li><i class="flaticon-email"></i>{{ $configuration->email }}
                             </li>
                             <li><i class="flaticon-location"></i> {{ $configuration->adress }}</li>
@@ -91,8 +102,8 @@
                         <h4>
                             Jornada de trabalho</h4>
                         <ul class="working-time">
-                            <li><span>Seg - Sáb</span> <span>9:00AM - 9:00PM</span></li>
-                            <li><span>Sun</span><span>Closed</span></li>
+                            <li><span>Seg - Sáb</span> <span>8:00AM - 17:00PM</span></li>
+                            <li><span>Domingos</span><span>Fechado</span></li>
                         </ul>
                     </div>
                 </div>

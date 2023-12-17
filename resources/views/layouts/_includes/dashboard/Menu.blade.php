@@ -172,6 +172,31 @@
                         </ul>
                     </li>
 
+
+
+
+                            {{-- categoria de Actualidade --}}
+                            <li class="nav-item dropdown">
+                                <a href="#copartner" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                                    <i class="fe fe-rss fe-16"></i>
+                                    <span class="ml-3 item-text">Paceiros</span>
+                                </a>
+                                <ul class="collapse list-unstyled pl-4 w-100" id="copartner">
+
+                                    <li class="nav-item">
+                                        <a class="nav-link pl-3" href="{{ route('admin.copartner.create') }}">
+                                            <span class="ml-1 item-text">Cadastrar Paceiros</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link pl-3" href="{{ route('admin.copartner.index') }}">
+                                            <span class="ml-1 item-text">Listar Paceiros</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
                 @endif
 
                 @if ('Editor' == Auth::user()->level || 'Administrador' == Auth::user()->level)
