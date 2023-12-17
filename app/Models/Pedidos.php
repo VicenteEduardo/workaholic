@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Copartner extends Model
+class Pedidos extends Model
 {
-    use HasFactory,SoftDeletes;
+    use HasFactory,softDeletes;
 
-    protected $table = 'copartners';
+    protected $table = 'pedidos';
     protected $guarded = ['id'];
      /**
      * The attributes that should be mutated to dates.

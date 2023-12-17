@@ -19,6 +19,10 @@
 <link rel="stylesheet" href="/site/css/style.css">
 <link rel="stylesheet" href="/site/css/responsive.css">
 
+    {{-- sweetalert --}}
+    <link rel="stylesheet" href="/css/sweetalert2.css">
+    <script src="/js/sweetalert2.all.min.js"></script>
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

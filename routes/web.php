@@ -23,7 +23,8 @@ Route::get('/add-to-cart/{id}', ['as' => 'add.to.cart', 'uses' => 'Site\ProductC
 Route::get('/update-cart', ['as' => 'update.cart', 'uses' => 'Site\ProductController@update']);
 Route::get('/remove-from-cart', ['as' => 'remove.from.cart', 'uses' => 'Site\ProductController@remove']);
 
-
+/**pedidos */
+Route::post('/pedidos', ['as' => 'site.pedidos', 'uses' => 'Site\PedidoController@index']);
 
 Route::get('/Termos-de-Uso', ['as' => 'site.termsOfUse', 'uses' => 'Site\TermsOfUseController@index']);
 

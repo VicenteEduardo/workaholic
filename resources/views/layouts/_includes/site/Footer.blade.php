@@ -173,6 +173,16 @@
 <script src="/site/js/odometer.min.js"></script>
 <script src="/site/js/custom.js"></script>
 
+@if (session('create'))
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Pedido feito com sucesso!',
+            showConfirmButton: true
+        })
+    </script>
+    @endif
+
 @yield('scripts')
 
 <script>

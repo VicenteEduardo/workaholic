@@ -79,6 +79,17 @@ Route::middleware(['auth'])->group(function () {
         Route::put('admin/agentes/update/{id}', ['as' => 'admin.agentes.update', 'uses' => 'Admin\AngenteController@update']);
         Route::get('admin/agentes/delete/{id}', ['as' => 'admin.agentes.delete', 'uses' => 'Admin\AngenteController@destroy']);
         /* end agentes */
+                /* agentes */
+                Route::get('admin/vendas/index', ['as' => 'admin.vendas.index', 'uses' => 'Admin\VendasController@index']);
+
+                Route::get('admin/estatistica/index', ['as' => 'admin.estatistica.index', 'uses' => 'Admin\VendasController@estatistica']);
+                 Route::get('admin/vendas/show/{id}', ['as' => 'admin.vendas.show', 'uses' => 'Admin\VendasController@show']);
+                Route::get('admin/vendas/create', ['as' => 'admin.vendas.create', 'uses' => 'Admin\VendasController@create']);
+                Route::post('admin/vendas/store', ['as' => 'admin.vendas.store', 'uses' => 'Admin\VendasController@store']);
+                Route::get('admin/vendas/edit/{id}', ['as' => 'admin.vendas.edit', 'uses' => 'Admin\VendasController@edit']);
+                Route::put('admin/vendas/update/{id}', ['as' => 'admin.vendas.update', 'uses' => 'Admin\VendasController@update']);
+                Route::get('admin/vendas/delete/{id}', ['as' => 'admin.vendas.delete', 'uses' => 'Admin\VendasController@destroy']);
+                /* end agentes */
 
 
         /* servicos */
