@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Venda;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -28,7 +29,7 @@ class ProductController extends Controller
         //
         try {
             $response['produt'] = Product::where('name', urldecode($title))->first();
-            $response['lasted'] = Product::where( 'name', '!=', urldecode($title))->orderBy('id', 'desc')->limit(5)->get();
+            $response['lasted'] = Product::where('name', '!=', urldecode($title))->orderBy('id', 'desc')->limit(5)->get();
             return view('site.product.single.index', $response);
         } catch (\Throwable $th) {
             return redirect()->route('site.services');
