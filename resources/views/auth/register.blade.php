@@ -1,10 +1,10 @@
 @extends('layouts.merge.dashboard')
-@section('titulo', 'Criar Conta no Portal da ReMA')
+@section('titulo', 'Criar Conta no Workaholic SA')
 @section('content')
 
     <div class="card shadow">
         <div class="card-body">
-            <h2 class="my-5 text-center">Criar conta no Portal da ReMA</h2>
+            <h2 class="my-5 text-center">Criar conta no Workaholic SA</h2>
 
             <!-- Validation Errors -->
             <x-auth-validation-errors class="mb-4 alert alert-danger" :errors="$errors" />
