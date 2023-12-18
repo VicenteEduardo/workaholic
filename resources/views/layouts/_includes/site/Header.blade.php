@@ -35,7 +35,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<title> @yield('titulo')</title>
+<title>Workaholic SA - @yield('titulo')</title>
 <link rel="icon" type="image/png" href="/site/images/fav-icon.png">
 </head>
 
@@ -62,6 +62,7 @@
     <li><a href="{{ $configuration->facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
     <li><a href="{{ $configuration->twitter }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
     <li><a href="{{ $configuration->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+    <li><img src="/angola.png" alt="" width="27"></li>
 
     </ul>
     </div>

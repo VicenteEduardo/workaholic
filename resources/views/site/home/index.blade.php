@@ -15,11 +15,9 @@
                                 <h6>Serviços de conserto de PC e celular</h6>
                                 <h1>
                                     Um serviço de reparo de tecnologia mais inteligente</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod
-                                    tibulum diam suspendisse adipiscing diam quis. Et id volutpat sit odio venenatis a dui.
-                                </p>
-                                <a class="default-button" href="{{ route('site.about') }}"><span>L
-                                        Saber mais<i class="flaticon-right-arrow"></i></span></a>
+
+                                <a class="default-button" href="{{ route('site.about') }}"><span>
+                                        Saber Mais<i class="flaticon-right-arrow"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -33,11 +31,9 @@
                                 <h6>
                                     Serviços de conserto de PC e celular</h6>
                                 <h1>Os melhores serviços de TI em toda a cidade</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod
-                                    tibulum diam suspendisse adipiscing diam quis. Et id volutpat sit odio venenatis a dui.
-                                </p>
-                                <a class="default-button" href="{{ route('site.about') }}"><span>L
-                                        Saber mais<i class="flaticon-right-arrow"></i></span></a>
+
+                                <a class="default-button" href="{{ route('site.about') }}"><span>
+                                        Saber Mais<i class="flaticon-right-arrow"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -50,12 +46,10 @@
                             <div class="banner-text-area banner-text-area-1">
                                 <h6>
                                     Serviços de conserto de PC e celular</h6>
-                                <h1>Repair Your Machines From Experts.</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod
-                                    tibulum diam suspendisse adipiscing diam quis. Et id volutpat sit odio venenatis a dui.
-                                </p>
-                                <a class="default-button" href="{{ route('site.about') }}"><span>L
-                                        Saber mais<i class="flaticon-right-arrow"></i></span></a>
+                                <h1>Repare suas máquinas com especialistas.</h1>
+
+                                <a class="default-button" href="{{ route('site.about') }}"><span>
+                                        Saber Mais<i class="flaticon-right-arrow"></i></span></a>
                             </div>
                         </div>
                     </div>

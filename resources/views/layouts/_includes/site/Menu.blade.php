@@ -79,18 +79,39 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Solicitar Técnico</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                ...
+                <form action="{{ route('site.solicitarTecnico') }}" method="post">
+                    @csrf
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12"> <label for="exampleInputEmail1">Nome Completo</label>
+                                <input required name="nome" type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Digite o seu nome">
+
+                            </div>
+                            <div class="col-12"> <label for="exampleInputEmail1">Telefone</label>
+                                <input required name="telefone" type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Digite Seu telefone">
+
+                            </div>
+                            <div class="col-12"> <label for="exampleInputEmail1">Morada</label>
+                                <input required name="endereco" type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Digite a Morada">
+                            </div>
+                        </div>
+                    </div>
+
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="submit" class="btn btn-primary">Solicitar Técnico</button>
             </div>
         </div>
+    </form>
     </div>
 </div>

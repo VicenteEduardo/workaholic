@@ -25,6 +25,7 @@ Route::get('/remove-from-cart', ['as' => 'remove.from.cart', 'uses' => 'Site\Pro
 
 /**pedidos */
 Route::post('/pedidos', ['as' => 'site.pedidos', 'uses' => 'Site\PedidoController@index']);
+Route::post('/solicitarTecnico', ['as' => 'site.solicitarTecnico', 'uses' => 'Site\SolicitarTecnicoController@index']);
 
 Route::get('/Termos-de-Uso', ['as' => 'site.termsOfUse', 'uses' => 'Site\TermsOfUseController@index']);
 

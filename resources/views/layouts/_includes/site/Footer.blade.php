@@ -10,9 +10,10 @@
 
                 @foreach ($copartners as $item)
 
-                <div class="testimonial-card" style='background-image:url("/storage/{{ $item->photo }}");background-position:center;background-size:cover;height:200px;'>
+                <div class="testimonial-card"
+                    style='background-image:url("/storage/{{ $item->photo }}");background-position:center;background-size:cover;height:200px;'>
                     <p></p>
-                    <div class="testimonial-intro-area"   >
+                    <div class="testimonial-intro-area">
 
                     </div>
                 </div>
@@ -66,6 +67,7 @@
                                         class="fab fa-twitter"></i></a></li>
                             <li><a href="{{ $configuration->instagram }}" target="_blank"><i
                                         class="fab fa-instagram"></i></a></li>
+                  
 
                         </ul>
                     </div>
@@ -77,7 +79,8 @@
                         Serviços</h3>
                     <ul>
                         @foreach ($services as $item)
-                            <li><a href="{!! url('/servicos/' . urlencode($item->name)) !!}">{!! mb_substr($item->name, 0, 25, 'UTF-8') !!}...</a></li>
+                        <li><a href="{!! url('/servicos/' . urlencode($item->name)) !!}">{!! mb_substr($item->name, 0,
+                                25, 'UTF-8') !!}...</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -124,7 +127,8 @@
 <div class="copyright">
     <div class="container">
         <p>Copyright @
-            <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+            </script>
             <script>
                 document.write(new Date().getFullYear())
             </script>. <strong></strong> Todos os direitos reservados por <a target="_blank"
@@ -174,14 +178,23 @@
 <script src="/site/js/custom.js"></script>
 
 @if (session('create'))
-    <script>
-        Swal.fire({
+<script>
+    Swal.fire({
             icon: 'success',
             title: 'Pedido feito com sucesso!',
             showConfirmButton: true
         })
-    </script>
-    @endif
+</script>
+@endif
+@if (session('create'))
+<script>
+    Swal.fire({
+            icon: 'success',
+            title: 'Pedido feito com sucesso!',
+            showConfirmButton: true
+        })
+</script>
+@endif
 
 @yield('scripts')
 
