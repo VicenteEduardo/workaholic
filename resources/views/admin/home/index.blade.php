@@ -41,7 +41,7 @@
                             </span>
                         </div>
                         <div class="col pr-0">
-                            <p class="small text-dark mb-0">Galerias</p>
+                            <p class="small text-dark mb-0">Serviços</p>
                             <span class="h3 mb-0 ">{{ $count_gallery }}</span>
                         </div>
                     </div>
