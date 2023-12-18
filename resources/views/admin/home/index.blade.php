@@ -6,7 +6,7 @@
     <div class="card mb-2">
         <div class="card-body">
             <h2 class="h5 page-title">
-                Portal da Rede de Mediatecas de Angola - <b>ReMA</b> <br>
+                Portal da  Workaholic SA<br>
                 <small>Painel Administrativo</small>
             </h2>
         </div>
@@ -59,8 +59,8 @@
                             </span>
                         </div>
                         <div class="col pr-0">
-                            <p class="small text-dark mb-0">Vídeos</p>
-                            <span class="h3 mb-0">{{ $count_video }}</span>
+                            <p class="small text-dark mb-0">Vendas</p>
+                            <span class="h3 mb-0">0</span>
                         </div>
 
                     </div>
