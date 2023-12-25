@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Classes\Logger;
 use App\Http\Controllers\Controller;
 use App\Models\Pedidos;
 use App\Models\Venda;
@@ -9,11 +10,12 @@ use Illuminate\Http\Request;
 
 class VendasController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private $Logger;
+
+    public function __construct()
+    {
+        $this->Logger = new Logger;
+    }
     public function index()
     {
        $response['pedidos']= Pedidos::get();
@@ -22,32 +24,32 @@ class VendasController extends Controller
 
     public function estatistica(){
         $date = date('Y');
-        $response['totalPedidos'] =  Venda::whereYear('created_at', '=', $date)->sum('price');
-        $response['totalPayments'] =  Venda::whereYear('created_at', '=', $date)->sum('price');;
-        $jan = Venda::whereMonth('created_at', '=', 01)->whereYear('created_at', '=', $date)->count();
+        $response['totalPedidos'] =  Venda:: where('status', 'Concluido')->whereYear('created_at', '=', $date)->sum('price');
+        $response['totalPayments'] =  Venda::where('status', 'Concluido')->whereYear('created_at', '=', $date)->sum('price');;
+        $jan = Venda:: where('status', 'Concluido')->whereMonth('created_at', '=', 01)->whereYear('created_at', '=', $date)->count();
         $response['jan'] = json_encode($jan);
-        $fev = Venda::whereMonth('created_at', '=', 02)->whereYear('created_at', '=', $date)->count();
+        $fev = Venda::where('status', 'Concluido')->whereMonth('created_at', '=', 02)->whereYear('created_at', '=', $date)->count();
         $response['fev'] = json_encode($fev);
-        $mar = Venda::whereMonth('created_at', '=', 03)->whereYear('created_at', '=', $date)->count();
+        $mar = Venda::where('status', 'Concluido')->whereMonth('created_at', '=', 03)->whereYear('created_at', '=', $date)->count();
         $response['mar'] = json_encode($mar);
-        $abr = Venda::whereMonth('created_at', '=', 04)->whereYear('created_at', '=', $date)->count();
+        $abr = Venda::where('status', 'Concluido')->whereMonth('created_at', '=', 04)->whereYear('created_at', '=', $date)->count();
         $response['abr'] = json_encode($abr);
-        $maio = Venda::whereMonth('created_at', '=', 05)->whereYear('created_at', '=', $date)->count();
+        $maio = Venda::where('status', 'Concluido')->whereMonth('created_at', '=', 05)->whereYear('created_at', '=', $date)->count();
         $response['maio'] = json_encode($maio);
-        $jun = Venda::whereMonth('created_at', '=', 06)->whereYear('created_at', '=', $date)->count();
+        $jun = Venda::where('status', 'Concluido')->whereMonth('created_at', '=', 06)->whereYear('created_at', '=', $date)->count();
         $response['jun'] = json_encode($jun);
-        $jul = Venda::whereMonth('created_at', '=', 07)->whereYear('created_at', '=', $date)->count();
+        $jul = Venda::where('status', 'Concluido')->whereMonth('created_at', '=', 07)->whereYear('created_at', '=', $date)->count();
         $response['jul'] = json_encode($jul);
-        $ago = Venda::whereMonth('created_at', '=', '08')->whereYear('created_at', '=', $date)->count();
+        $ago = Venda::where('status', 'Concluido')->whereMonth('created_at', '=', '08')->whereYear('created_at', '=', $date)->count();
         $response['ago'] = json_encode($ago);
         /**d */
-        $set = Venda::whereMonth('created_at', '=', '09')->whereYear('created_at', '=', $date)->count();
+        $set = Venda::where('status', 'Concluido')->whereMonth('created_at', '=', '09')->whereYear('created_at', '=', $date)->count();
         $response['set'] = json_encode($set);
-        $out = Venda::whereMonth('created_at', '=', '10')->whereYear('created_at', '=', $date)->count();
+        $out = Venda::where('status', 'Concluido')->whereMonth('created_at', '=', '10')->whereYear('created_at', '=', $date)->count();
         $response['out'] = json_encode($out);
-        $nov = Venda::whereMonth('created_at', '=', 11)->whereYear('created_at', '=', $date)->count();
+        $nov = Venda::where('status', 'Concluido')->whereMonth('created_at', '=', 11)->whereYear('created_at', '=', $date)->count();
         $response['nov'] = json_encode($nov);
-        $dez = Venda::whereMonth('created_at', '=', 12)->whereYear('created_at', '=', $date)->count();
+        $dez = Venda::where('status', 'Concluido')->whereMonth('created_at', '=', 12)->whereYear('created_at', '=', $date)->count();
         $response['dez'] = json_encode($dez);
         return view('admin.vendas.estatistica.index',$response);
     }
@@ -81,7 +83,11 @@ class VendasController extends Controller
      */
     public function show($id)
     {
-        //
+        $response['pedido']=    Pedidos::find($id);
+    $response['vendas']= Venda::where('fk_pedido',$id)->get();
+    $response['price']= Venda::where('fk_pedido',$id)->sum('price');
+
+    return view('admin.vendas.details.index',$response);
     }
 
     /**
@@ -92,7 +98,9 @@ class VendasController extends Controller
      */
     public function edit($id)
     {
-        //
+        $response['pedido']=    Pedidos::find($id);
+
+        return view('admin.vendas.edit.index',$response);
     }
 
     /**
@@ -104,7 +112,23 @@ class VendasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        Pedidos::find($id)->update([
+            "nome"=>$request->nome,
+            "telefone"=>$request->telefone,
+            "endereco"=>$request->endereco,
+            "status"=>$request->status,
+        ]);
+        //Logger
+
+
+        Venda::where('fk_pedido',$id)->update([
+
+            "status"=>$request->status,
+        ]);
+
+        $this->Logger->log('info', 'Editou uma venda com o identificador ' . $id);
+        return redirect("admin/vendas/index")->with('edit', '1');
     }
 
     /**

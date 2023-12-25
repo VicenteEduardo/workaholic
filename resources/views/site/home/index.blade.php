@@ -120,11 +120,15 @@
                             <p>Somos a Workaholic SA, especialistas em tecnologia, telecomunicações e automação. Cuide da
                                 produtividade do seu negócio com segurança e eficiência.
                             <ol>
-                                <li>Consertamos computadores e impressoras de todos os tipos.</li>
+                                <li>Consertamos computadores e impressoras.</li>
+                                @if(1==0)
+
+
                                 <li>Equipe altamente qualificada e experiente.</li>
                                 <li>Soluções personalizadas para suas necessidades.</li>
                                 <li>Agilidade e compromisso com a excelência.</li>
                                 <li>Expansão contínua para melhor atendê-lo.</li>
+                                @endif
                             </ol><br>Escolha a Workaholic SA e experimente a mais alta qualidade em serviços. Entre em
                             contato agora e eleve sua produtividade para um novo nível!
                             </p>

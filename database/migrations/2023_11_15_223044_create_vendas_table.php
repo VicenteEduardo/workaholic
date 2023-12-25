@@ -19,6 +19,7 @@ class CreateVendasTable extends Migration
             $table->string('quantity');
             $table->string('price');
             $table->string('image');
+            $table->string('status')->nullable();
             $table->string('fk_pedido');
             $table->softDeletes();
             $table->timestamps();

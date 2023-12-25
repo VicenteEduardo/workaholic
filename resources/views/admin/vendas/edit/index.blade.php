@@ -1,11 +1,12 @@
 @extends('layouts.merge.dashboard')
-@section('titulo', 'Cadastrar Notícia')
+@section('titulo', 'Editar vendas')
 
 @section('content')
     <div class="card mb-2">
         <div class="card-body">
             <h2 class="h5 page-title">
-                Cadastrar Notícia
+                <a href="{{ route('admin.news.index') }}"><u>Listar vendas</u></a> > Editar vendas >
+                {{ $pedido->nome }}
             </h2>
         </div>
     </div>
@@ -20,19 +21,23 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('admin.copartner.store') }}" method="POST" enctype="multipart/form-data" class="row">
+            <form action='{{ url("admin/vendas/update/{$pedido->id}") }}' method="POST" enctype="multipart/form-data"
+                class="row">
                 @csrf
-                @include('forms._formcopartner.index')
+                @method('PUT')
+                @include('forms._formsVendas.index')
                 <div class="col-md-12">
                     <div class="form-group text-center">
-                        <button type="submit" class="btn px-5 col-md-4 btn-success">
-                            Salvar
+                        <button type="submit" class="btn px-5 col-md-6 btn-primary">
+                            Salvar alterações
                             <span class="fe fe-chevron-right fe-16"></span>
                         </button>
 
                     </div>
                 </div>
             </form>
+
+
         </div>
     </div>
 

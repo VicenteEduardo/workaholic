@@ -22,6 +22,8 @@
 
                         <th>Preço</th>
                         <th>Status</th>
+
+                        <th>ACÇÕES</th>
                     </tr>
                 </thead>
                 <tbody class="bg-white">
@@ -32,6 +34,25 @@
                             <td>{{ $item->nome }} </td>
                             <td>   {!! number_format($item->total, 0, ',', '.') !!} kz </td>
                             <td>  {{ $item->status }} </td>
+
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <i class="fa fa-clone fa-sm" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a href='{{ url("admin/vendas/show/{$item->id}") }}'
+                                            class="dropdown-item">Detalhes</a>
+
+                                        <a href='{{ url("admin/vendas/edit/{$item->id}") }}'
+                                            class="dropdown-item">Editar</a>
+
+
+                                    </div>
+                                </div>
+                            </td>
 
                         </tr>
                     @endforeach

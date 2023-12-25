@@ -81,7 +81,7 @@
             {{-- categoria de Actualidade --}}
             <li class="nav-item dropdown">
                 <a href="#Vendas" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                    <i class="fe fe-rss fe-16"></i>
+                    <i class="fe fe-credit-card fe-16"></i>
                     <span class="ml-3 item-text">Vendas</span>
                 </a>
                 <ul class="collapse list-unstyled pl-4 w-100" id="Vendas">
@@ -107,7 +107,7 @@
             {{-- categoria de Actualidade --}}
             <li class="nav-item dropdown">
                 <a href="#services" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                    <i class="fe fe-rss fe-16"></i>
+                    <i class="fe fe-command fe-16"></i>
                     <span class="ml-3 item-text">Serviços</span>
                 </a>
                 <ul class="collapse list-unstyled pl-4 w-100" id="services">
@@ -132,7 +132,7 @@
             {{-- categoria de Actualidade --}}
             <li class="nav-item dropdown">
                 <a href="#product" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                    <i class="fe fe-rss fe-16"></i>
+                    <i class="fe fe-briefcase fe-16"></i>
                     <span class="ml-3 item-text">Produtos</span>
                 </a>
                 <ul class="collapse list-unstyled pl-4 w-100" id="product">
@@ -155,7 +155,7 @@
             {{-- categoria de Actualidade --}}
             <li class="nav-item dropdown">
                 <a href="#Agentes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                    <i class="fe fe-rss fe-16"></i>
+                    <i class="fe fe-users fe-16"></i>
                     <span class="ml-3 item-text">Agentes</span>
                 </a>
                 <ul class="collapse list-unstyled pl-4 w-100" id="Agentes">
@@ -207,7 +207,8 @@
             {{-- categoria de Actualidade --}}
             <li class="nav-item dropdown">
                 <a href="#copartner" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                    <i class="fe fe-rss fe-16"></i>
+                    <i class="fe fe-user-check
+                    fe-16"></i>
                     <span class="ml-3 item-text">Paceiros</span>
                 </a>
                 <ul class="collapse list-unstyled pl-4 w-100" id="copartner">
